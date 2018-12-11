@@ -11,7 +11,7 @@ using namespace std;
 
 void countLine(char* pName)
 {
-	int count = 2
+	int count = 2;
 
 
 	cout<< "\nNumber of lines: " << count;
@@ -23,7 +23,7 @@ void countChar(char* pName)
 
 {
 	int count = 0;
-	while(pName != '\n')
+	while(*pName != '\n')
 	{
 		count++;
 	}
@@ -62,11 +62,11 @@ int main(int argc,char** argv)
 		if(in_stream.fail())        //if in_stream does not open file
   		{
    		 	cout << endl << nameOfFile << " failed to open!\n";
-    			exit(1);
+    			//exit(1);
   		}	
 
 		fstream filed;
-		char* words
+		char* words;
 		while(filed >> words)
 		{
 			countLine(words);
@@ -109,7 +109,5 @@ int main(int argc,char** argv)
 
 
 
-  	}	
-
-  	getdata (in_stream, main_ra, used);  //call to funciton to get array data
+  	
 	
